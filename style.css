@@ -1,0 +1,787 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #1F2039;
+    color: #FFFFFF;
+    line-height: 1.6;
+    max-width: 100%;
+    margin: 0 auto
+}
+/* Style de la navigation pour desktop */
+nav ul {
+    display: flex; /* Affiche les liens en ligne */
+    list-style: none;
+    gap: 30px; /* Espacement entre les liens */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    font-family: 'Manrope', sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    transition: background-color 0.3s, border-radius 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #A672A6;
+    border-radius: 4px;
+}
+
+/* Header */
+/* Style général pour le header */
+header {
+    background-color: #1F2039;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/* Icône hamburger */
+
+.hamburger {
+    display: none; /* Visible seulement sur mobile */
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px; /* Ajout d'espacement en haut et à gauche */
+    position: absolute; /* Position absolue pour fixer l'icône */
+    top: 10px; /* Position en haut */
+    left: 10px; /* Position à gauche */
+    z-index: 1001; /* Assurez-vous qu'il reste au-dessus des autres éléments */
+}
+
+#nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Caché par défaut */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Ajuste l'espace sous le hamburger */
+    left: 0;
+    background-color: #1F2039;
+    width: 100%;
+    z-index: 1000;
+}
+
+#nav-links li {
+    padding: 5px  20px; /* Réduit l'espace vertical entre les éléments */
+    text-align: left; /* Alignement à gauche */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Lignes de séparation */
+}
+
+#nav-links li:last-child {
+    border-bottom: none; /* Supprime la bordure sous le dernier élément */
+}
+
+#nav-links li a {
+    font-size: 16px; /* Taille réduite pour les mobiles */
+    color: #ffffff;
+    text-decoration: none;
+    display: block; /* Permet un clic plus large */
+}
+
+    */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* About Section */
+
+#accueil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Remplit toute la hauteur de la fenêtre */
+    text-align: center;
+}
+
+#welcome-text {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, purple, pink, white);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+
+.social-links {
+    display: flex;
+    gap: 15px; /* Espacement entre les icônes */
+}
+
+
+
+.social-links a {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #590253 ;
+    background-color: #1F2039;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #A672A6; /* Couleur de fond jaune au survol */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); /* Ombre noire au survol */
+}
+
+.social-links img {
+    filter: drop-shadow(1px 1px 1px black); /* Effet de dessin pour les icônes */
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover img {
+    transform: scale(1.1); /* Agrandissement de l'icône au survol */
+}
+
+
+#about {
+    margin-left: 20px;
+    padding: clamp(20px, 5vw, 100px);
+    text-align: left;
+}
+#about img {
+    float: right;
+    border: 1px  solide  #A672A6;
+    border-radius: 50%;
+    box-shadow: 12px 12px 2px rgba(0, 0, 0, 0.2);
+    margin-left: 30px;
+}
+
+#about p {
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.2rem);
+    line-height: 1.8;
+    margin-bottom: 30px;
+    background-color: #1F2039;
+    max-width: 60ch;
+}
+.main-button-container {
+    display: flex;
+    justify-content: center; /* Centre le conteneur principal */
+    gap: 20px; /* Espace entre les deux button-wrapper */
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center; /* Centre les boutons dans chaque conteneur */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    background-color: #7FFFD4;
+    color: #FFFFFF;
+    border: 2px solid #000;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #A672A6;
+    box-shadow: 5px 5px 0px #000;
+}
+
+.button:active {
+    background-color: greenyellow;
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+
+
+/* About Me Section */
+#about-me {
+    padding: 100px 20px;
+}
+#about-me h2 {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+#about-me p {
+    margin-left: 300px;
+    padding: 20px;
+    box-shadow: 3px 5px 0px #fff;
+}
+/* Reseau */
+.reseau {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+.reseau img {
+    transition: transform 0.3s;
+}
+.reseau img:hover {
+    transform: scale(1.2);
+}
+
+/* Competences Section */
+/* Section compétences */
+#competences {
+    margin-bottom: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#competences h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: white;
+}
+
+/* Conteneur principal des barres */
+.competence-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacement entre chaque barre */
+    max-width: 90%; /* Adapte la largeur pour les petits écrans */
+    margin: 0 auto; /* Centre le contenu horizontalement */
+}
+
+
+/* Conteneur individuel pour chaque barre */
+.skill-bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligne le texte à gauche */
+}
+
+/* Texte de la compétence */
+.skill-bar-container span {
+    margin-bottom: 5px; /* Espacement entre le texte et la barre */
+    font-size: 16px;
+    color: white;
+}
+
+/* Barres de compétences */
+.skill-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ffff;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Barre de progression */
+.skill-bar .fill {
+    height: 100%;
+    background-color:  #A672A6;
+    transition: width 0.3s ease-in-out;
+}
+
+
+/* Projects Section */
+#projets {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#projets h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+#projets h3 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+/* Alignement et espacement des colonnes de projets */
+.project-columns {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Réduit l'espacement entre les colonnes sur petits écrans */
+    flex-wrap: wrap; /* Permet de passer à une nouvelle ligne si l'espace est insuffisant */
+    margin-bottom: 40px;
+}
+/* Cartes des projets avec taille réduite et couleur harmonisée */
+.project-card {
+    background-color: #1F2039;
+    border: 2px solid #A672A6;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 220px;
+    height: 300px; /* Fixe une hauteur égale pour toutes les cartes */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Aligne le contenu verticalement */
+    margin-bottom: 50px;
+    overflow: hidden; /* Évite tout débordement du contenu */
+}
+
+.project-card:hover, .formation-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(217, 129, 182 , 0,2);
+    transition: all 0.3s ease-in-out;
+}
+.project-card img {
+    width: 100%;
+    height: 150px; /* Fixe une hauteur uniforme pour toutes les images */
+    object-fit: cover; /* Ajuste l'image pour remplir le conteneur sans déformation */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#formation{
+    margin-bottom: 100px;
+}
+#formation h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+/* Alignement des colonnes au centre */
+.formation-columns {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+}
+/* Les cartes de chaque section */
+.formation-category {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* Style pour chaque carte */
+.formation-card {
+    background-color: #1F2039;
+    border-radius: 5px;
+    border: 1px solid #A672A6;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 220px; /* Identique à .project-card */
+    height: 300px; /* Identique à .project-card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Aligne le contenu verticalement */
+    padding: 15px; /* Ajoute un padding pour le contenu */
+    overflow: hidden; /* Évite les débordements */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+/* Contact Section */
+#contact {
+    background-color:  #ffffff;
+    border: 1px solid  #fbc7fb; 
+    padding: 60px 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px; /* Largeur maximale */
+    margin: 0 auto; /* Centrer le formulaire */
+    padding: 20px; /* Ajout de padding pour les petits écrans */
+}
+
+
+#contact fieldset {
+    border: 3px solid  #A5B4FC;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+#contact legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    padding: 0 12px;
+}
+
+#contact label {
+    font-weight: bold;
+    color: #333;
+}
+
+#contact input, #contact textarea {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+}
+
+#contact input:focus, #contact textarea:focus {
+    border-color: #A5B4FC;
+    box-shadow: 0 0 5px rgba(165, 180, 252, 0.5);
+    outline: none;
+}
+
+#contact button {
+    background-color:  #7FFFD4;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    align-self: flex-start;
+}
+
+#contact button:hover {
+    background-color: #A672A6;
+    transform: translateY(-3px);
+}
+
+#contact button:active {
+    transform: translateY(1px);
+}
+
+#confirmation-message {
+    color: #28A745;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+
+h1, h2, h3 {
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* Veille Technologique Section */
+#veille-techno {
+    padding: 100px 20px;
+}
+#veille-techno h2 {
+    margin-bottom: 50px;
+}
+#veille-techno .veille-columns {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+#veille-techno .veille-columns > div {
+    flex: 1;
+    padding: 20px;
+    margin-bottom: 20px; 
+    border: 2px solid #A672A6;;
+    border-radius: 10px ;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#veille-techno .veille-columns > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.full-text.hidden {
+    display: none;
+}
+
+.toggle-btn {
+    background-color: #1F2039;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+.toggle-btn:hover {
+    background-color: #372d54;
+}
+
+/* footer */
+footer {
+    background-color: #1F2039;
+    padding: 20px 0;
+    color: white;
+    text-align: center; /* Assure que le contenu textuel est centré */
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Ajoute de l'espacement entre les sections du footer */
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center; /* Centre les icônes horizontalement */
+    align-items: center; /* Centre les icônes verticalement */
+    gap: 15px; /* Espacement entre les icônes */
+}
+
+footer .social-links a img {
+    width: 30px; /* Ajuste la taille des icônes */
+    height: 30px; /* Assure une taille uniforme */
+    transition: transform 0.3s ease; /* Ajoute une animation au survol */
+}
+
+footer .social-links a img:hover {
+    transform: scale(1.2); /* Agrandit légèrement les icônes au survol */
+}
+
+footer .contact-info {
+    font-size: 14px;
+}
+
+footer .footer-nav {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacement entre les liens de navigation */
+}
+
+footer .footer-nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .footer-nav a:hover {
+    color: #A5B4FC; /* Change la couleur des liens au survol */
+}
+
+footer .credits {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/* Animations */
+/* Navigation pour les écrans larges (desktop) */
+/* Navigation pour les écrans larges (desktop) */
+@media (min-width: 769px) {
+    #nav-links {
+        display: flex; /* Positionne les liens horizontalement */
+        gap: 20px; /* Ajoute de l'espace entre les liens */
+        position: static; /* Supprime les positions absolues */
+        flex-direction: row; /* Assure un alignement en ligne */
+        background-color: transparent; /* Supprime le fond */
+        width: auto; /* Ajuste la largeur */
+        margin: 0; /* Supprime les marges */
+        padding: 0; /* Supprime les padding */
+    }
+
+    nav {
+        display: flex;
+        justify-content: flex-start; /* Aligne les éléments à gauche */
+        align-items: center; /* Aligne verticalement les éléments */
+    }
+
+    #nav-links li {
+        padding: 0; /* Supprime les espaces inutiles */
+        border: none; /* Supprime les bordures */
+    }
+
+    #nav-links li a {
+        font-size: 16px; /* Taille adaptée pour desktop */
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .hamburger {
+        display: none; /* Cache le hamburger sur les écrans larges */
+    }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) { 
+   /* Navigation pour les écrans larges (desktop) */
+
+   @media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Affiche le menu hamburger */
+    }
+
+    #nav-links {
+        display: none; /* Cache le menu horizontal */
+        flex-direction: column; /* Liens affichés verticalement */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #1F2039;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    #nav-links.active {
+        display: flex; /* Affiche le menu vertical sur mobile */
+    }
+}
+
+
+
+    header {
+        padding: 10px;
+    }
+
+    #about img {
+        display: none;
+
+    }
+
+
+    header nav {
+       position: absolute;
+
+
+    }
+       
+    h1 {
+        font-size: 4rem;
+      }
+      #about p {
+        padding: 10px;
+    }
+
+    #projets, #veille-techno {
+        padding: 20px;
+    }
+    #about-me p {
+
+        margin-left: 0;
+        margin-right: 0;
+        margin: 0 auto; 
+        text-align: center;
+        box-shadow: none;
+        padding: 10px;
+        transition: color 0.3s ease; 
+    }
+
+    #about-me p:hover {
+        color: #6a5acd; /* Change la couleur du texte au survol */
+    }
+    #dynamic-text {
+        font-size: 1.2rem; /* Ajuste cette valeur selon la taille de l'écran */
+        white-space: nowrap; /* Empêche le texte de se diviser en plusieurs lignes */
+    }
+   
+
+    .project-card {
+        width: 100%; /* Les cartes occupent toute la largeur sur mobile */
+        height: auto; /* Laisse les cartes ajuster leur hauteur */
+    }
+
+    .project-columns {
+        gap: 10px; /* Réduit l'espacement entre les cartes */
+    }
+    .formation-card {
+        width: 100%; /* La carte occupe toute la largeur sur mobile */
+        height: auto; /* Ajuste la hauteur selon le contenu */
+    }
+
+    .formation-columns {
+        flex-direction: column; /* Empile les colonnes verticalement sur petits écrans */
+        align-items: center;
+        gap: 20px; /* Réduit l'espace entre les colonnes */
+    }
+
+    #formation .formation-columns,
+    #projets .project-columns,
+    #veille-techno .veille-columns {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center; /* Assure que les colonnes sont bien centrées */
+        justify-content: center;
+        width: 100%;
+        transition: transform 0.3s ease; /* Ajoute une transition fluide */
+    }
+
+    .block:hover {
+        transform: translateY(-5px); /* Soulève légèrement les blocs */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour un effet de profondeur */
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto; /* Centre horizontalement */
+        text-align: center;
+        background-color: #7FFFD4;
+        color: #FFFFFF;
+        text-decoration: none;
+        border: 2px solid #000;
+        border-radius: 10px;
+        transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+
+    }
+
+    .button:hover {
+        background-color: #A672A6;/* Change la couleur du bouton au survol */
+        transform: scale(1.05); /* Agrandit légèrement le bouton au survol */
+    }
+
+    .button:active {
+        transform: scale(0.95); /* Réduction légère au clic pour simuler l'effet de pression */
+        background-color: #7b68ee;
+    }
+
+    #contact h2 {
+        font-size: 1.5rem; /* Réduit la taille du titre */
+        margin-bottom: 20px;
+    }
+
+    #contact form {
+        padding: 15px; /* Réduit le padding */
+    }
+
+    #contact fieldset {
+        padding: 15px; /* Réduit le padding des fieldsets */
+    }
+
+    #contact input, #contact textarea {
+        padding: 12px; /* Réduit le padding des champs */
+        font-size: 1rem; /* Diminue légèrement la taille du texte */
+    }
+
+    #contact button {
+        font-size: 0.9rem; /* Réduit la taille du bouton */
+        padding: 10px 20px;
+    }
+}
