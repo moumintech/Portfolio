@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation Active Directory</title>
+    <style>
+        /* ROOT VARIABLES */
+        :root {
+            --bg-color: #1F2039;
+            --primary-color: #A672A6;
+            --highlight-color: #7FFFD4;
+            --text-color: #FFFFFF;
+            --font-primary: 'Ubuntu', sans-serif;
+            --font-secondary: 'Manrope', sans-serif;
+        }
+
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* MAIN SECTION */
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* TITRE PRINCIPAL */
+        h1 {
+            font-family: var(--font-secondary);
+            font-size: 2.5rem;
+            text-align: center;
+            color: var(--highlight-color);
+            margin-bottom: 30px;
+        }
+
+        /* TITRES DES SECTIONS */
+        section {
+            margin-bottom: 40px;
+            background-color: #2C2C54;
+            padding: 20px;
+            border-left: 5px solid var(--primary-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        section h2 {
+            font-family: var(--font-secondary);
+            color: var(--highlight-color);
+            margin-bottom: 15px;
+            position: relative;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        section h2::after {
+            content: ":";
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* LISTES DES FONCTIONNALITÉS */
+        #fonctionnalites ul {
+            list-style: none;
+            margin-left: 20px;
+        }
+
+        #fonctionnalites ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        #fonctionnalites ul li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: var(--highlight-color);
+            font-size: 1.2rem;
+        }
+
+        /* LIEN GITHUB */
+        #github a {
+            color: var(--highlight-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        #github a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+        .btn-accueil {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--highlight-color);
+            color: var(--bg-color);
+            padding: 10px 20px;
+            font-family: var(--font-secondary);
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn-accueil:hover {
+            background-color: #5fc1a0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Section Titre Principal -->
+        <h1>Installation et Configuration Active Directory</h1>
+        
+        <!-- Section Fonctionnalités -->
+        <section id="fonctionnalites">
+            <h2>Fonctionnalités principales</h2>
+            <ul>
+                <li>Créer et gérer des unités organisationnelles (OU)</li>
+                <li>Ajouter des utilisateurs et groupes avec permissions spécifiques</li>
+                <li>Appliquer et gérer les stratégies de groupe (GPO)</li>
+                <li>Centraliser l'authentification des utilisateurs</li>
+            </ul>
+        </section>
+
+        <!-- Section GitHub -->
+        <section id="github">
+            <h2>Accéder au code source</h2>
+            <p>Le projet complet est disponible sur mon GitHub :</p>
+            <a href="https://github.com/votre-utilisateur/votre-repo" target="_blank">Voir le dépôt GitHub</a>
+        </section>
+
+        <!-- Section Captures d'écran -->
+        <section id="captures">
+            <h2>Captures d'écran</h2>
+            <img src="images/ad-example.png" alt="Capture Active Directory" class="screenshot">
+        </section>
+
+        <!-- Section Guide -->
+        <section id="guide">
+            <h2>Guide d'installation</h2>
+            <ol>
+                <li>Installer Windows Server 2019.</li>
+                <li>Configurer Active Directory et DNS.</li>
+                <li>Créer des utilisateurs et groupes dans AD.</li>
+                <li>Appliquer des stratégies via GPO pour sécuriser le réseau.</li>
+                <li>Tester l'authentification sur des postes clients.</li>
+            </ol>
+        </section>
+    </main>
+    <a href="../#projets">
+        <button class="btn-accueil">Retour à l'accueil</button>
+    </a>
+</body>
+</html>

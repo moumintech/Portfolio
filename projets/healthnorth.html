@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health North</title>
+    <style>
+      :root {
+    --bg-color: #1F2039;
+    --primary-color: #A672A6;
+    --highlight-color: #7FFFD4;
+    --text-color: #FFFFFF;
+    --font-primary: 'Ubuntu', sans-serif;
+    --font-secondary: 'Manrope', sans-serif;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* MAIN SECTION */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* TITRE PRINCIPAL */
+h1 {
+    font-family: var(--font-secondary);
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--highlight-color);
+    margin-bottom: 30px;
+}
+
+/* TITRES DES SECTIONS */
+section {
+    margin-bottom: 40px;
+    background-color: #2C2C54;
+    padding: 20px;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    font-family: var(--font-secondary);
+    color: var(--highlight-color);
+    margin-bottom: 15px;
+    position: relative;
+    text-align: left;
+    padding-left: 10px;
+}
+
+section h2::after {
+    content: ":";
+    color: var(--primary-color);
+    font-weight: bold;
+}
+#presentation ul {
+    list-style: none;
+    margin-left: 20px;
+}
+
+#presentation ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+#presentation ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--highlight-color);
+    font-size: 1.2rem;
+}
+#github a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+#github a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+.btn-accueil {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--highlight-color);
+            color: var(--bg-color);
+            padding: 10px 20px;
+            font-family: var(--font-secondary);
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn-accueil:hover {
+            background-color: #5fc1a0;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <main>
+   
+        
+        <h1 >Projet Health North</h1>
+
+        <!-- Présentation générale -->
+        <section class="presentation">
+            <h2>Présentation </h2>
+            <p>Le projet Health North vise à développer un système de gestion médicale complet.</p>
+            <ul>
+                <li>Gestion des patients, rendez-vous, dossiers médicaux et prescriptions.</li>
+                <li>Base de données relationnelle (MariaDB) pour organiser les données.</li>
+                <li>Accès via des applications Web, mobile et lourde.</li>
+                <li>Authentification sécurisée via Active Directory.</li>
+                <li>Gestion des versions avec GitHub.</li>
+            </ul>
+        </section>
+
+        <section id="github">
+            <h2>Accéder au code source</h2>
+            <p>Le projet complet est disponible sur mon GitHub :</p>
+            <a href="https://github.com/votre-utilisateur/votre-repo" target="_blank">Voir le dépôt GitHub</a>
+        </section>
+        <section id="captures">
+            <h2>Captures d'écran</h2>
+            <img src="image/gn3.png" alt="Capture de GNS3" class="screenshot">
+        </section>
+
+        <!-- Composantes du projet -->
+        <section class="composant">
+            <h2>Composantes du projet </h2>
+
+            <h3>a) Base de données </h3>
+            <p><strong>Technologie </strong> MariaDB sous WampServer.</p>
+            <ul>
+                <li>Tables : Patients, RendezVous, Spécialiste, etc.</li>
+                <li>Procédures stockées pour gérer les patients et rendez-vous.</li>
+                <li>Déclencheurs pour historiser les modifications.</li>
+            </ul>
+
+            <h3>b) Application Web :</h3>
+            <p><strong>Technologie :</strong> PHP + MariaDB.</p>
+            <p><strong>Fonctionnalités :</strong></p>
+            <ul>
+                <li>Gestion des patients (ajout, consultation).</li>
+                <li>Planification des rendez-vous.</li>
+            </ul>
+
+            <h3>c) Application Mobile :</h3>
+            <p><strong>Technologie :</strong> Flutter.</p>
+            <p>Consultation des dossiers patients et accès rapide aux rendez-vous.</p>
+
+            <h3>d) Application Lourde :</h3>
+            <p><strong>Technologie :</strong> Java (Swing/JavaFX).</p>
+            <p>Fonctionnalités avancées pour gérer les prescriptions et l'import/export des données.</p>
+
+            <h3>e) API :</h3>
+            <p><strong>Technologie :</strong> Node.js ou PHP.</p>
+            <p>Routes GET et POST pour manipuler les données.</p>
+        </section>
+
+        <!-- Gestion des versions -->
+        <section class="section">
+            <h2>Gestion des versions </h2>
+            <p><strong>Technologie :</strong> GitHub</p>
+            <p>Organisation des fichiers :</p>
+            <pre>
+ProjetMedical/
+├─ Web/
+├─ Mobile/
+├─ Lourde/
+├─ API/
+├─ SQL/
+│   ├─ creation_base.sql
+│   ├─ procedures_stockees.sql
+├─ README.md
+            </pre>
+        </section>
+        <a href="../#projets">
+            <button class="btn-accueil">Retour à l'accueil</button>
+        </a>
+</main>
+</body>
+</html>
