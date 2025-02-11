@@ -1,7 +1,3 @@
-
-
-
-
 # 🌸 Mon Portfolio Étudiante  
 Bienvenue sur mon portfolio ! Ce site regroupe mes projets, compétences et expériences afin de mettre en avant mon parcours en développement web.  
 
@@ -23,6 +19,6 @@ Le portfolio est entièrement développé en **HTML, CSS et JavaScript**, sans f
 
 ## 📧 Contact  
 Si vous souhaitez me contacter, vous pouvez le faire via :  
-- **Email** : votre.email@example.com  
+- **Email** : moumini.tech@gmail.com  
 
 
